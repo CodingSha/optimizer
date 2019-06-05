@@ -7,7 +7,7 @@ import Foundation
 public class SequenceManager: NSObject {
     public typealias Transaction = () -> Void
 
-    var isGenesis = true
+    private var isGenesis = true
     private lazy var sequenceQueue: DispatchQueue = {
         DispatchQueue(label: "sequence_queue")
     }()
